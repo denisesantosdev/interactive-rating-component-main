@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --primary-clr: hsl(25, 97%, 53%);
+  --neutral-clr-100: hsl(0, 0%, 100%);
+  --neutral-clr-200: hsl(217, 12%, 63%);
+  --neutral-clr-300: hsl(216, 12%, 54%);
+  --dark-clr-100: hsl(214, 21%, 23%);
+  --dark-clr-150: hsl(215, 20%, 16%);
+  --dark-clr-200: hsl(216, 12%, 8%);
+
+  --font: "Overpass", sans-serif;
+  --fs-100: 0.9375rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*   outline: 1px solid red;
+ */
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+  
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--dark-clr-200);
+}
+
+/* RATING CARD COMPONENT */
+.rating-card {
+  font-family: var(--font);
+  max-width: 400px;
+  background-color: var(--dark-clr-150);
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+.rating-card__start-state > *:where(:not(:last-child)),
+.rating-card__end-state > *:where(:not(:last-child)) {
+  margin-bottom: 2rem;
+}
+
+.rating-card h1 {
+  color: var(--neutral-clr-100);
+  margin-bottom: 1rem;
+}
+
+.rating-card p:not(.rating-card__user-rating) {
+  color: var(--neutral-clr-200);
+  line-height: 1.6;
+}
+
+.rating-card__star {
+  display: grid;
+  place-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--dark-clr-100);
+}
+
+.rating-card__numbers {
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+}
+
+.rating-card__numbers input {
+  opacity: 0;
+}
+
+.rating-card__numbers label {
+  display: grid;
+  place-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--dark-clr-100);
+  color: var(--neutral-clr-200);
+  cursor: pointer;
+}
+
+.rating-card__numbers label:hover,
+.rating-card__numbers input:focus + label {
+  background-color: var(--neutral-clr-300);
+  transition: all 0.5s ease;
+}
+
+.rating-card__numbers input:checked + label {
+  background-color: var(--primary-clr);
+  color: var(--neutral-clr-100);
+  transition: all 0.5s ease;
+}
+
+.rating-card__btn {
+  background-color: var(--primary-clr);
+  color: var(--neutral-clr-100);
+  width: 100%;
+  border-radius: 30px;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.5s ease;
+}
+
+.rating-card__btn--active:focus-visible,
+.rating-card__btn--active:hover {
+  background-color: var(--neutral-clr-100);
+  color: var(--primary-clr);
+}
+
+.rating-card__end-state {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.rating-card__user-rating {
+  background-color: var(--dark-clr-100);
+  color: var(--primary-clr);
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.attribution {
+  align-self: end;
+}
+
+.hidden {
+  display: none;
+}
