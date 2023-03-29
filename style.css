@@ -28,23 +28,18 @@ picture {
   max-width: 100%;
   display: block;
 }
-  
-button {
-  font-family: inherit;
-  border: none;
-  cursor: pointer;
-}
 
 body {
   min-height: 100vh;
   display: grid;
   place-items: center;
   background-color: var(--dark-clr-200);
+  font-family: var(--font);
+  padding: 1rem;
 }
 
 /* RATING CARD COMPONENT */
 .rating-card {
-  font-family: var(--font);
   max-width: 400px;
   background-color: var(--dark-clr-150);
   padding: 2rem;
@@ -77,12 +72,14 @@ body {
 
 .rating-card__numbers {
   display: flex;
-  place-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .rating-card__numbers input {
   opacity: 0;
+  visibility: hidden;
+  position: absolute;
 }
 
 .rating-card__numbers label {
@@ -109,6 +106,9 @@ body {
 }
 
 .rating-card__btn {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
   background-color: var(--primary-clr);
   color: var(--neutral-clr-100);
   width: 100%;
@@ -141,6 +141,18 @@ body {
 
 .attribution {
   align-self: end;
+  padding: 1rem;
+  color: var(--neutral-clr-200);
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--primary-clr);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
 }
 
 .hidden {
