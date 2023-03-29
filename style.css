@@ -91,6 +91,7 @@ body {
   background-color: var(--dark-clr-100);
   color: var(--neutral-clr-200);
   cursor: pointer;
+  user-select: none;
 }
 
 .rating-card__numbers label:hover,
@@ -103,6 +104,7 @@ body {
   background-color: var(--primary-clr);
   color: var(--neutral-clr-100);
   transition: all 0.5s ease;
+  cursor: initial;
 }
 
 .rating-card__btn {
