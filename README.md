@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://denisesantosdev.github.io/interactive-rating-component-main/](https://your-live-site-url.com)
+- [Live Site URL](https://denisesantosdev.github.io/interactive-rating-component-main/)
 
 ## My process
 
