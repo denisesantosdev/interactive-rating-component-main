@@ -72,8 +72,8 @@ body {
 
 .rating-card__numbers {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .rating-card__numbers input {
