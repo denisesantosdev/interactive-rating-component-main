@@ -73,13 +73,14 @@ body {
 .rating-card__numbers {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: .5rem;
+  justify-content: center;
 }
 
 .rating-card__numbers input {
   opacity: 0;
-  visibility: hidden;
-  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 .rating-card__numbers label {
